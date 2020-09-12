@@ -1,0 +1,51 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    
+    <h1>Yazılım Bilimi Bloğu</h1>
+    <hr>
+
+    <main role="main" class="container">
+        <div class="jumbotron text-center">
+            <h3>Yazılım Bilimi Nedir?</h3>
+            <p class="lead">Yazılım Bilimi Bloğuna Hoşgeldiniz.</p>
+      
+        </div>
+    {% if islem == 1 %}
+        <p>Birinci İşlem </p>
+    {% elif islem == 2 %}
+        <p>2.İşlem</p>
+    {% else %}
+        <p>Gecersiz İşlem</p>
+    {% endif %}
+
+
+    <ul>
+        {% for number in numbers %}
+            <li>Article ID:{{number.id}} - Title: {{number.title}} - Context: {{number.context}}</li>
+                        
+        
+        {% endfor %}
+    </ul>
+{% endblock body %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
